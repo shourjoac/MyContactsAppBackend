@@ -27,7 +27,8 @@ const registerUser = asyncHandler(async (req, res) => {
     password: hashedPassword,
   });
 
-  console.log(`User created ${user}`);
+  console.log(`User created ${user}`)
+  ;
   if (user) {
     res.status(201).json({ _id: user.id, email: user.email });
   } else {
